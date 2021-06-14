@@ -8,9 +8,11 @@
     <div *ngFor="let item1 of item | keyvalue">
       Key: <b>{{ item1.key }}</b> <br />
 
-      <div *ngFor="let nazwisko-index of item1.value">
+      <div *ngFor="let nazwisko_index of item1.value">
 
-      <!-- nazwisko: <b>{{ wynik["Nick"][0] }}</b> -->
+      nazwisko: {{nazwisko_index}}
+
+      {{game["Nick"][nazwisko_index]}} <br>
     </div>
   </div>
 </div>

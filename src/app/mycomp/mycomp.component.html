@@ -1,14 +1,41 @@
 <p>mycomp works!</p>
+<!-- <p>{{wynik["Belgia_-_Rosja"][1]["0:1"][0]}}</p> -->
+<!-- <div *ngFor="let mecz of wynik | keyvalue"> -->
+
+<div *ngFor="let mecz of game | keyvalue">
+  TITLE {{ mecz.key }}
+  <div *ngFor="let item of wynik[mecz.key]">
+    <div *ngFor="let item1 of item | keyvalue">
+      Key: <b>{{ item1.key }}</b> <br />
+
+      <div *ngFor="let nazwisko-index of item1.value">
+
+      <!-- nazwisko: <b>{{ wynik["Nick"][0] }}</b> -->
+    </div>
+  </div>
+</div>
+
+<!-- </div> -->
+
+<!-- <div *ngFor="let item of wynik | keyvalue">
+    Key: <b>{{item.key}}</b> <br> and Value: <b>{{item.value}}</b>
+    <li *ngFor="let item of item.value">
+        {{item}}
+        </li>
+</div> -->
+
+<p>mycomp works!</p>
+
+<!-- {{game['Nick'][item.value]}} -->
 
 <!-- <tr *ngFor="let hero of cegla">
     <td>{{hero[0]}}</td>
 </tr> -->
 
-<div *ngFor="let item of cegla | keyvalue">
-    Key: <b>{{item.key}}</b> <br> and Value: <b>{{item.value}}</b>
+<!-- <div *ngFor="let item of cegla | keyvalue">
+    Key: <b>{{ item.key }}</b> <br />
+    and Value: <b>{{ item.value }}</b>
     <li *ngFor="let item of item.value">
-        {{game['Nick'][item]}}
-        </li>
-
-<!-- {{game['Nick'][item.value]}} -->
-</div>
+      {{ game["Nick"][item] }}
+    </li>
+  </div> -->

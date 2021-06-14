@@ -1,0 +1,14 @@
+<p>mycomp works!</p>
+
+<!-- <tr *ngFor="let hero of cegla">
+    <td>{{hero[0]}}</td>
+</tr> -->
+
+<div *ngFor="let item of cegla | keyvalue">
+    Key: <b>{{item.key}}</b> <br> and Value: <b>{{item.value}}</b>
+    <li *ngFor="let item of item.value">
+        {{game['Nick'][item]}}
+        </li>
+
+<!-- {{game['Nick'][item.value]}} -->
+</div>
